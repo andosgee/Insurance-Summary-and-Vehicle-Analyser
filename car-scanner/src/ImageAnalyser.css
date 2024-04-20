@@ -34,8 +34,8 @@
 .uploader {
     display: flex;
     padding: 1em;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
 }
 
 input[type="file"] {
@@ -73,12 +73,12 @@ input[type="file"] {
     color: white;
     border: none;
     padding: 10px 20px;
-    margin-top: 1em;
     height: 2.5em;
     font-size: 1.1em;
     text-align: center;
     width: 12em;
     cursor: pointer;
+    margin-left: 1em;
     transition: background-color 0.3s, box-shadow 0.3s;
 }
 

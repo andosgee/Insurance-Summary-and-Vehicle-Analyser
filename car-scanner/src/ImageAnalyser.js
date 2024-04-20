@@ -54,7 +54,7 @@ const [results, setResults] = useState('');
     const run = async () => {
         const model = genAI.getGenerativeModel({ model: "gemini-pro-vision", safetySettings });
 
-        const prompt = "What is this cars/trucks make, model, estimate of year, and registration number? If there is no Registration return with 'No resgistration can be seen'. Please use the format 'Car -' position of car in image, 'Make -' make of car, 'Model -' model of car, 'Year -' year of car, 'Registration -' registration of car";
+        const prompt = "What is this cars/trucks make, model, estimate of year, and registration number? If there is no Registration return with 'No resgistration can be seen'. If only a partial of a car can be seenm, don't try make out what it is. Please use the format 'Car -' position of car in image, 'Make -' make of car, 'Model -' model of car, 'Year -' year of car, 'Registration -' registration of car. Separate multiple cars with a ':'";
 
         const fileInputEl = document.querySelector("input[type=file]");
         const imageParts = await Promise.all([...fileInputEl.files].map(fileToGenerativePart));
